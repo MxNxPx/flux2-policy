@@ -1,0 +1,14 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockNodePort
+metadata:
+  name: block-nodeport-exception
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Service"]
+    labelSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "default-ns/block-nodeport-exception"
+          operator: "DoesNotExist"

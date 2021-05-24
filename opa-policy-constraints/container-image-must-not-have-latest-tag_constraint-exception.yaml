@@ -1,0 +1,16 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sDisallowedTags
+metadata:
+  name: container-image-must-not-have-latest-tag-exception
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    labelSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "default-ns/disallowed-tags-exception"
+          operator: "DoesNotExist"
+  parameters:
+    tags: ["latest"]
