@@ -12,3 +12,8 @@ spec:
         # testing exception here
         - key: "default-ns/block-nodeport-exception"
           operator: "DoesNotExist"
+    namespaceSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "company/exception-present"
+          operator: "DoesNotExist"

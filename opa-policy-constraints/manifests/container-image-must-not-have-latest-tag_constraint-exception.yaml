@@ -12,5 +12,10 @@ spec:
         # testing exception here
         - key: "default-ns/disallowed-tags-exception"
           operator: "DoesNotExist"
+    namespaceSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "company/exception-present"
+          operator: "DoesNotExist"
   parameters:
     tags: ["latest"]
