@@ -11,7 +11,7 @@ spec:
       matchExpressions:
         - key: company/exception-present
           operator: NotIn
-          values: [true]
+          values: [granted]
     labelSelector:
       matchExpressions:
         - key: default-ns/disallowed-tags-exception
