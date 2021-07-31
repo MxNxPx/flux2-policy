@@ -11,9 +11,10 @@ spec:
       matchExpressions:
         # testing exception here
         - key: "company/exception-present"
-          operator: "NotIn"
-          values:
-            - "true"
+          operator: "DoesNotExist"
+          #operator: "NotIn"
+          #values:
+          #  - "true"
     labelSelector:
       matchExpressions:
         # testing exception here
