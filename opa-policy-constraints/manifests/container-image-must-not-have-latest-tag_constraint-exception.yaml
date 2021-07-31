@@ -18,7 +18,7 @@ spec:
       matchExpressions:
         # testing exception here
         - key: "company/exception-present"
-          operator: "NotIn"
+          operator: "In"
           values:
             - "true"
   parameters:
