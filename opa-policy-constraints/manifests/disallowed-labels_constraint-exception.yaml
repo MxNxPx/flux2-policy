@@ -16,11 +16,6 @@ spec:
             - "tagExceptionReason1"
             - "tagExceptionReason2"
             - "tagExceptionReason3"
-        - key: "default-ns/disallowed-registry-exception"
-          operator: "NotIn"
-          values:
-            - "regExceptionReason1"
-            - "regExceptionReason2"
     namespaceSelector:
       matchExpressions:
         # testing exception here
