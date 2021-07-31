@@ -16,13 +16,13 @@ spec:
             - "tagExceptionReason1"
             - "tagExceptionReason2"
             - "tagExceptionReason3"
-    namespaceSelector:
-      matchExpressions:
-        # testing exception here
-        - key: "company/exception-present"
-          operator: "In"
-          values:
-            - "true"
+#    namespaceSelector:
+#      matchExpressions:
+#        # testing exception here
+#        - key: "company/exception-present"
+#          operator: "In"
+#          values:
+#            - "true"
   parameters:
     message: "Exception labels not allowed without approval"
     labels:
