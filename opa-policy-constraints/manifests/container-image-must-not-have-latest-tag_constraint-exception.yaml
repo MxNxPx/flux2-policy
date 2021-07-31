@@ -4,6 +4,7 @@ metadata:
   name: container-image-must-not-have-latest-tag-exception
 spec:
   match:
+    scope: Namespaced
     kinds:
       - apiGroups: ["*"]
         kinds: ["Pod"]
