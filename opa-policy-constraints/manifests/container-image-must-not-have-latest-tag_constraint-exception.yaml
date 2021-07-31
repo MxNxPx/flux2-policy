@@ -14,12 +14,12 @@ spec:
           operator: "NotIn"
           values:
             - "granted"
-    namespaceSelector:
-      matchExpressions:
-        # testing exception here
-        - key: "company/exception-present"
-          operator: "In"
-          values:
-            - "true"
+#    namespaceSelector:
+#      matchExpressions:
+#        # testing exception here
+#        - key: "company/exception-present"
+#          operator: "In"
+#          values:
+#            - "true"
   parameters:
     tags: ["latest"]
