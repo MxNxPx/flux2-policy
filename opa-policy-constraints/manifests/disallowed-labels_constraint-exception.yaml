@@ -1,0 +1,35 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sDisallowedLabels
+metadata:
+  name: disallowed-labels-exception
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    labelSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "default-ns/disallowed-tags-exception"
+          operator: "In"
+          values:
+            - "tagExceptionReason1"
+            - "tagExceptionReason2"
+            - "tagExceptionReason3"
+        - key: "default-ns/disallowed-registry-exception"
+          operator: "In"
+          values:
+            - "regExceptionReason1"
+            - "regExceptionReason2"
+    namespaceSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "company/exception-present"
+          operator: "In"
+          values:
+            - "true"
+  parameters:
+    message: "Exception labels not allowed without approval"
+    labels:
+      - key: "default-ns/disallowed-tags-exception"
+      - key: "default-ns/disallowed-registry-exception"
