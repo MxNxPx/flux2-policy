@@ -7,13 +7,6 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
-    labelSelector:
-      matchExpressions:
-        # testing exception here
-        - key: "default-ns/disallowed-tags-exception"
-          operator: "NotIn"
-          values:
-            - "granted"
     namespaceSelector:
       matchExpressions:
         # testing exception here
@@ -21,5 +14,12 @@ spec:
           operator: "NotIn"
           values:
             - "true"
+    labelSelector:
+      matchExpressions:
+        # testing exception here
+        - key: "default-ns/disallowed-tags-exception"
+          operator: "NotIn"
+          values:
+            - "granted"
   parameters:
     tags: ["latest"]
