@@ -11,13 +11,13 @@ spec:
       matchExpressions:
         # testing exception here
         - key: "default-ns/disallowed-tags-exception"
-          operator: "In"
+          operator: "NotIn"
           values:
             - "tagExceptionReason1"
             - "tagExceptionReason2"
             - "tagExceptionReason3"
         - key: "default-ns/disallowed-registry-exception"
-          operator: "In"
+          operator: "NotIn"
           values:
             - "regExceptionReason1"
             - "regExceptionReason2"
