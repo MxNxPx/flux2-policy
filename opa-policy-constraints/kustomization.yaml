@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - manifests/container-image-must-not-have-latest-tag_constraint-exception.yaml
   - manifests/service-block-nodeport_constraint-exception.yaml
+  - manifests/disallowed-labels_constraint-exception.yaml
