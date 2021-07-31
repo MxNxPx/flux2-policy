@@ -11,11 +11,15 @@ spec:
       matchExpressions:
         # testing exception here
         - key: "default-ns/disallowed-tags-exception"
-          operator: "DoesNotExist"
+          operator: "NotIn"
+          values:
+            - "granted"
     namespaceSelector:
       matchExpressions:
         # testing exception here
         - key: "company/exception-present"
-          operator: "DoesNotExist"
+          operator: "NotIn"
+          values:
+            - "true"
   parameters:
     tags: ["latest"]
