@@ -13,9 +13,8 @@ spec:
         - key: "default-ns/disallowed-tags-exception"
           operator: "NotIn"
           values:
-            - "tagExceptionReason1"
-            - "tagExceptionReason2"
-            - "tagExceptionReason3"
+            - "tagExceptionReason01"
+            - "tagExceptionReason02"
 #    namespaceSelector:
 #      matchExpressions:
 #        # testing exception here
