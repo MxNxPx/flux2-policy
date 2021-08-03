@@ -15,7 +15,7 @@ spec:
           values:
             - "tagExceptionReason01"
             - "tagExceptionReason02"
-            - "tagExceptionReason03"           
+            - "tagExceptionReason03"
 #    namespaceSelector:
 #      matchExpressions:
 #        # testing exception here
