@@ -11,12 +11,13 @@ spec:
       matchExpressions:
         # testing exception here
         - key: "default-ns/disallowed-tags-exception"
-          operator: "NotIn"
-          values:
-            - "tagExceptionReason1"
-            - "tagExceptionReason2"
-            - "tagExceptionReason3"
-            - "tagExceptionReason4"
+          operator: "DoesNotExist"
+          # operator: "NotIn"
+          # values:
+          #   - "tagExceptionReason1"
+          #   - "tagExceptionReason2"
+          #   - "tagExceptionReason3"
+          #   - "tagExceptionReason4"
 #    namespaceSelector:
 #      matchExpressions:
 #        # testing exception here
